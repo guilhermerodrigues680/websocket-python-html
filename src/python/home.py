@@ -1,16 +1,10 @@
-# WS server example that synchronizes state across clients
-
 import asyncio
 import json
 import logging
-import websockets
-
-logging.basicConfig(level=logging.DEBUG, format='%(name)s - %(levelname)s - %(message)s')
 
 STATE = {"value": 0}
 
 USERS = set()
-
 
 def state_event():
     return json.dumps({"type": "state", **STATE})
@@ -39,12 +33,11 @@ async def register(websocket):
 
 
 async def unregister(websocket):
+    logging.info("Um usuario se desconectou")
     USERS.remove(websocket)
     await notify_users()
 
-
 async def counter(websocket, path):
-    # Quando receber uma conexao, registra ela. Depois envia um user_event() to websocket
     await register(websocket)
     try:
         await websocket.send(state_event())
@@ -61,11 +54,4 @@ async def counter(websocket, path):
             else:
                 logging.error("unsupported event: {}", data)
     finally:
-        logging.info("Finally")
         await unregister(websocket)
-
-
-start_server = websockets.serve(counter, "0.0.0.0", 6789)
-
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()

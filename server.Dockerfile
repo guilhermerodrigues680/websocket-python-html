@@ -7,7 +7,7 @@ COPY ./requirements.txt ./
 RUN pip install -r requirements.txt
 
 # Copia o projeto backend
-COPY ./src/webSocketServer.py ./
+COPY ./src/python ./
 
 # Definindo comando padrao do container para iniciar a aplicacao.
-CMD python3 webSocketServer.py
+CMD python3 main.py

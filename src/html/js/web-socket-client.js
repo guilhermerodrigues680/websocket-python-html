@@ -1,6 +1,6 @@
-var PLAY_WITH_DOCKER = true;
 var websocketUrl;
 
+// PLAY_WITH_DOCKER é definida no arquivo 'config.js'
 if (PLAY_WITH_DOCKER) { // Ex url: http://ip172-18-0-6-bpv591jcktm0008lvju0-8080.direct.labs.play-with-docker.com/
     const url = window.location.host;
     const hostWithPortWebsocket = url.replace(8080, 6789);
