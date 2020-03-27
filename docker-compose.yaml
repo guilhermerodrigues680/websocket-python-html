@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+
+  # Servidor Websocket Python
+  server:
+    container_name: server # Nome do container
+    image: server:v0.1.0 # Nome da imagem : tag da versao
+    ports: 
+      - "6789:6789" # portaExterna:portaInterna , HOST:CONTAINER
+    expose:
+      - "6789" # Espoe a porta na rede interna do container
+    build:
+      context: .
+      dockerfile: server.Dockerfile # Dockerfile usando a imagem oficial no nodejs
+    restart: always # Sempre reinicia o container em caso de parada
+
+  # Client HTTP que acesso o websocket
+  client:
+    container_name: client
+    image: client:v0.1.0 # Nome da imagem : tag da versao
+    ports: 
+      - "8080:80" # portaExterna:portaInterna , HOST:CONTAINER
+    expose:
+      - "80" # Espoe a porta na rede interna do container
+    build:
+      context: .
+      dockerfile: client.Dockerfile # Dockerfile usando a imagem oficial no nodejs
+    restart: always # Sempre reinicia o container em caso de parada

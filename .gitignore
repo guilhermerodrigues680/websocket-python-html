@@ -1,0 +1,5 @@
+myvenv/*
+!/myvenv/.gitkeep
+.Python
+.DS_Store
+.vscode
