@@ -23,9 +23,22 @@ na maquina virtual, basta clicar sobre elas para ter acesso aos servicos.
 
 Para encerrar a execucao do container, presssione `Ctrl + C` e em seguida clique no botao CLOSE SESSION.
 
+### Capturas de tela
+
+#### Clonando o repositorio e subindo o container da aplicação
+
+![GIF-01](docs/GIF-01.gif)
+![GIF-02](docs/GIF-02.gif)  
+
+#### Aplicacação
+
+![GIF-03](docs/GIF-03.gif)
+![GIF-04](docs/GIF-04.gif)
+
+# Executando a aplicaçao localmente
+
+Acesse o arquivo **src/html/js/config.js** e altere a veriável `PLAY_WITH_DOCKER` para `false`
+
+<!-- Referencia de links -->
 [play_with_docker]: https://labs.play-with-docker.com/
 [this_repository]: https://github.com/guilhermerodrigues680/websocket-python-html.git
-
-# Executadno a aplicacao localmente
-
-Acesse o arquivo **src/html/js/config.js** e altera a verial `PLAY_WITH_DOCKER` para `false`
