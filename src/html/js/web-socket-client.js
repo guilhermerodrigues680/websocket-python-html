@@ -35,7 +35,7 @@ websocket.onmessage = function (event) {
             $('.value').text(data.value);
             break;
         case 'users':
-            $('.users').text(`${data.count.toString()} user${data.count == 1 ? "" : "s"} online`);
+            $('.users').text(`${data.count.toString()} usuário${data.count == 1 ? "" : "s"} online`);
             break;
         default:
             console.error("unsupported event", data);

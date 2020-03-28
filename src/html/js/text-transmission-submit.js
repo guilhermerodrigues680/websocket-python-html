@@ -24,7 +24,7 @@ websocket.onmessage = function (event) {
     const data = JSON.parse(event.data);
     switch (data.type) {
         case 'users':
-            $('#users-count').text(`Usuarios: ${data.count}`);
+            $('#users-count').text(`Usuários: ${data.count}`);
             break;
     }
 };

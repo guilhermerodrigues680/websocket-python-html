@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptor da mensagem</title>
+    <link rel="stylesheet" href="vendor/bootstrap-4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/text-transmission-receive.css">
 </head>
 <body>
-    <h1>carregando...</h1>
-    <p id="p-mensagem" style="white-space: pre-wrap;"></p>
+    <div class="jumbotron text-center my-0">
+        <h1>Receptor da mensagem</h1>
+        <p class="lead">Todo texto digitado na pagina de envio é espelhado aqui.</p> 
+    </div>
+
+    <div class="d-flex text-center text-light mt-0 mb-5">
+        <a class="p-2 bg-secondary flex-fill btn rounded-0 text-light" href="./index.html">
+            <div>Home</div>
+        </a>
+    </div>
+
+    <div class="container-flip bg-info text-light text-center shadow-lg py-3 mt-1">
+        <div id="p-mensagem">
+            Aguardando mensagem... <div class="spinner-grow text-light"></div>
+        </div>
+    </div>
+
+    <!-- FRAMEWORKS -->
     <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- SCRIPTS JS -->
     <script src="js/config.js"></script>
     <script src="js/text-transmission-receive.js"></script>
 </body>

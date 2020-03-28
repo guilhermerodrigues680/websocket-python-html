@@ -25,3 +25,7 @@ Para encerrar a execucao do container, presssione `Ctrl + C` e em seguida clique
 
 [play_with_docker]: https://labs.play-with-docker.com/
 [this_repository]: https://github.com/guilhermerodrigues680/websocket-python-html.git
+
+# Executadno a aplicacao localmente
+
+Acesse o arquivo **src/html/js/config.js** e altera a verial `PLAY_WITH_DOCKER` para `false`

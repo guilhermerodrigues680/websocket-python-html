@@ -1,0 +1,7 @@
+textarea {
+    border: 1px solid #686ac8;
+}
+.form-control:focus {
+    border: 1px solid #6876c8;
+    box-shadow: 0 0 0 0.2rem rgba(104, 106, 200, 0.25);
+}

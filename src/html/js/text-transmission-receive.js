@@ -7,7 +7,7 @@ if (PLAY_WITH_DOCKER) { // Ex url: http://ip172-18-0-6-bpv591jcktm0008lvju0-8080
     hostWithPortWebsocket += window.location.pathname.replace('.html', '') + '/'
     websocketUrl = "ws://" + hostWithPortWebsocket; // PLAY WITH DOCKER
 } else {
-    websocketUrl = 'ws://127.0.0.1:6789/text-transmission-submit/'; // DEFAULT 
+    websocketUrl = 'ws://127.0.0.1:6789/text-transmission-receive/'; // DEFAULT 
 }
 
 console.info("Websocket Url: ",websocketUrl);

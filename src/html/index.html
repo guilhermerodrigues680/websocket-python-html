@@ -3,22 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSocket</title>
+    <title>WebSocket Home</title>
+    <link rel="stylesheet" href="vendor/bootstrap-4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style-index.css">
 </head>
 <body>
-    <div class="buttons">
-        <div class="minus button">-</div>
-        <div class="value">?</div>
-        <div class="plus button">+</div>
+    <div class="jumbotron text-center mb-0">
+        <h1>Página Inicial</h1>
+        <p class="lead">Nesta pagina ao incrementar ou decrementar o valor, todos os usuarios recebem a atualização.</p> 
     </div>
-    <div class="state">
-        <span class="users">? online</span>
+    
+    <div class="d-flex text-center text-light mt-0 mb-5">
+        <a class="p-2 bg-primary flex-fill btn rounded-0 text-light" href="./text-transmission-submit.html">
+            <div>Transmissor de mensagem</div>
+        </a>
+        <a class="p-2 bg-primary flex-fill btn rounded-0 text-light" href="./text-transmission-receive.html">
+            <div >Receptor de mensagem</div>
+        </a>
+    </div>
+
+    <div class="container text-center py-2">
+        <div class="row">
+            <button class="col minus btn-lg btn-danger">-</button>
+            <span class="col value my-auto h2">?</span>
+            <button class="col plus btn-lg btn-success">+</button>
+        </div>
+        <div class="container-flip text-center mt-3">
+            <span class="users display-4">? usuários online</span>
+        </div>
     </div>
 
     <button id="btn-reconectar">Tentar estabelecer conexão</button>
 
+    <!-- FRAMEWORKS -->
     <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- SCRIPTS JS -->
     <script src="js/config.js"></script>
     <script src="js/web-socket-client.js"></script>
 </body>
