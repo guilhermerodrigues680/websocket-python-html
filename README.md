@@ -23,7 +23,7 @@ na maquina virtual, basta clicar sobre elas para ter acesso aos servicos.
 
 Para encerrar a execucao do container, presssione `Ctrl + C` e em seguida clique no botao CLOSE SESSION.
 
-### Capturas de tela
+### Capturas de tela (GIFs)
 
 #### Clonando o repositorio e subindo o container da aplicação
 
